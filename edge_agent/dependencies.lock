@@ -1,0 +1,1196 @@
+dependencies:
+  app_claw:
+    dependencies:
+    - name: cap_boards
+      path: ../../claw_capabilities/cap_boards
+    - name: cap_files
+      path: ../../claw_capabilities/cap_files
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_FILES} == True
+    - name: cap_agent_mgr
+      path: ../../claw_capabilities/cap_agent_mgr
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_AGENT_MGR} == True
+    - name: cap_im_platform
+      path: ../../claw_capabilities/cap_im_platform
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_IM_FEISHU} == True || $CONFIG{APP_CLAW_CAP_IM_QQ} == True || $CONFIG{APP_CLAW_CAP_IM_TG} == True || $CONFIG{APP_CLAW_CAP_IM_WECHAT} == True
+    - name: cap_im_local
+      path: ../../claw_capabilities/cap_im_local
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_IM_LOCAL} == True
+    - name: cap_llm_inspect
+      path: ../../claw_capabilities/cap_llm_inspect
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LLM_INSPECT} == True
+    - name: cap_llm_config
+      path: ../../claw_capabilities/cap_llm_config
+    - name: cap_lua
+      path: ../../claw_capabilities/cap_lua
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+    - name: cap_mcp_client
+      path: ../../claw_capabilities/cap_mcp_client
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_MCP_CLIENT} == True
+    - name: mcp_mdns
+      path: ../mcp_mdns
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_MCP_CLIENT} == True || $CONFIG{APP_CLAW_CAP_MCP_SERVER} == True
+    - name: cap_mcp_server
+      path: ../../claw_capabilities/cap_mcp_server
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_MCP_SERVER} == True
+    - name: cap_router_mgr
+      path: ../../claw_capabilities/cap_router_mgr
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_ROUTER_MGR} == True
+    - name: cap_scheduler
+      path: ../../claw_capabilities/cap_scheduler
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_SCHEDULER} == True
+    - name: cap_session_mgr
+      path: ../../claw_capabilities/cap_session_mgr
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_SESSION_MGR} == True
+    - name: cap_skill_mgr
+      path: ../../claw_capabilities/cap_skill_mgr
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_SKILL_MGR} == True
+    - name: cap_system
+      path: ../../claw_capabilities/cap_system
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_SYSTEM} == True
+    - name: cap_http_request
+      path: ../../claw_capabilities/cap_http_request
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_HTTP_REQUEST} == True
+    - name: cap_web_search
+      path: ../../claw_capabilities/cap_web_search
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_WEB_SEARCH} == True
+    - name: claw_cap
+      path: ../../claw_modules/claw_cap
+    - name: claw_core
+      path: ../../claw_modules/claw_core
+    - name: claw_event_router
+      path: ../../claw_modules/claw_event_router
+    - name: claw_manager
+      path: ../../claw_modules/claw_manager
+    - name: claw_memory
+      path: ../../claw_modules/claw_memory
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_MEMORY} == True
+    - name: claw_skill
+      path: ../../claw_modules/claw_skill
+    - name: claw_utils
+      path: ../../claw_modules/claw_utils
+    - name: skill_builder
+      path: ../../common/skill_builder
+    - name: lua_module_builder
+      path: ../../common/lua_module_builder
+    - name: system_ui
+      path: ../system_ui
+      rules:
+      - if: $CONFIG{ESP_BOARD_DEV_DISPLAY_LCD_SUPPORT} == True
+    - name: lua_driver_adc
+      path: ../../lua_modules/lua_driver_adc
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_DRIVER_ADC} == True
+    - name: lua_driver_gpio
+      path: ../../lua_modules/lua_driver_gpio
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_DRIVER_GPIO} == True
+    - name: lua_driver_i2c
+      path: ../../lua_modules/lua_driver_i2c
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_DRIVER_I2C} == True
+    - name: lua_driver_mcpwm
+      path: ../../lua_modules/lua_driver_mcpwm
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_DRIVER_MCPWM} == True
+    - name: lua_driver_pcnt
+      path: ../../lua_modules/lua_driver_pcnt
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_DRIVER_PCNT} == True
+    - name: lua_driver_rmt
+      path: ../../lua_modules/lua_driver_rmt
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_DRIVER_RMT} == True
+    - name: lua_driver_touch
+      path: ../../lua_modules/lua_driver_touch
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_DRIVER_TOUCH} == True
+    - name: lua_driver_uart
+      path: ../../lua_modules/lua_driver_uart
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_DRIVER_UART} == True
+    - name: lua_module_audio
+      path: ../../lua_modules/lua_module_audio
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_AUDIO} == True
+      - if: $CONFIG{ESP_BOARD_DEV_AUDIO_CODEC_SUPPORT} == True
+    - name: lua_module_board_manager
+      path: ../../lua_modules/lua_module_board_manager
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_BOARD_MANAGER} == True
+    - name: lua_module_button
+      path: ../../lua_modules/lua_module_button
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_BUTTON} == True
+    - name: lua_module_ble
+      path: ../../lua_modules/lua_module_ble
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_BLE} == True
+    - name: lua_module_ble_hid
+      path: ../../lua_modules/lua_module_ble_hid
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_BLE_HID} == True
+    - name: lua_module_call_capability
+      path: ../../lua_modules/lua_module_call_capability
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_CAPABILITY} == True
+    - name: lua_module_camera
+      path: ../../lua_modules/lua_module_camera
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_CAMERA} == True
+      - if: $CONFIG{ESP_BOARD_DEV_CAMERA_SUPPORT} == True
+    - name: lua_module_delay
+      path: ../../lua_modules/lua_module_delay
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_DELAY} == True
+    - name: lua_module_display
+      path: ../../lua_modules/lua_module_display
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_DISPLAY} == True
+    - name: lua_module_epaper
+      path: ../../lua_modules/lua_module_epaper
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_EPAPER} == True
+    - name: lua_module_environmental_sensor
+      path: ../../lua_modules/lua_module_environmental_sensor
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_ENVIRONMENTAL_SENSOR} == True
+    - name: lua_module_event_publisher
+      path: ../../lua_modules/lua_module_event_publisher
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_EVENT_PUBLISHER} == True
+    - name: lua_module_http_server
+      path: ../../lua_modules/lua_module_http_server
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_HTTP_SERVER} == True
+    - name: lua_module_json
+      path: ../../lua_modules/lua_module_json
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_JSON} == True
+    - name: lua_module_thread
+      path: ../../lua_modules/lua_module_thread
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_THREAD} == True
+    - name: lua_module_fuel_gauge
+      path: ../../lua_modules/lua_module_fuel_gauge
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_FUEL_GAUGE} == True
+    - name: lua_module_image
+      path: ../../lua_modules/lua_module_image
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_IMAGE} == True
+    - name: lua_module_imu
+      path: ../../lua_modules/lua_module_imu
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_IMU} == True
+    - name: lua_module_ir
+      path: ../../lua_modules/lua_module_ir
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_IR} == True
+    - name: lua_module_knob
+      path: ../../lua_modules/lua_module_knob
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_KNOB} == True
+    - name: lua_module_lcd
+      path: ../../lua_modules/lua_module_lcd
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_LCD} == True
+    - name: lua_module_lcd_touch
+      path: ../../lua_modules/lua_module_lcd_touch
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_LCD_TOUCH} == True
+      - if: $CONFIG{ESP_BOARD_DEV_LCD_TOUCH_SUPPORT} == True
+      - if: $CONFIG{ESP_BOARD_DEV_LCD_TOUCH_SUB_I2C_SUPPORT} == True
+    - name: lua_module_ledc
+      path: ../../lua_modules/lua_module_ledc
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_LEDC} == True
+    - name: lua_module_led_strip
+      path: ../../lua_modules/lua_module_led_strip
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_LED_STRIP} == True
+    - name: lua_module_lvgl
+      path: ../../lua_modules/lua_module_lvgl
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_LVGL} == True
+    - name: lua_module_magnetometer
+      path: ../../lua_modules/lua_module_magnetometer
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_MAGNETOMETER} == True
+    - name: lua_module_sci
+      path: ../../lua_modules/lua_module_sci
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_SCI} == True
+    - name: lua_module_storage
+      path: ../../lua_modules/lua_module_storage
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_STORAGE} == True
+    - name: lua_module_system
+      path: ../../lua_modules/lua_module_system
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_SYSTEM} == True
+    - name: lua_module_vision
+      path: ../../lua_modules/lua_module_vision
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{ESP_BOARD_DEV_CAMERA_SUPPORT} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_VISION} == True
+    source:
+      path: ../../components/common/app_claw
+      type: local
+    version: '*'
+  app_config:
+    dependencies: []
+    source:
+      path: components/app_config
+      type: local
+    version: '*'
+  cap_agent_mgr:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_agent_mgr
+      type: local
+    version: '*'
+  cap_boards:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_boards
+      type: local
+    version: '*'
+  cap_files:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_files
+      type: local
+    version: '*'
+  cap_http_request:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_http_request
+      type: local
+    version: '*'
+  cap_im_local:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_im_local
+      type: local
+    version: '*'
+  cap_im_platform:
+    dependencies:
+    - name: claw_utils
+      path: ../../claw_modules/claw_utils
+    - name: espressif/esp_websocket_client
+      version: ^1.4.0
+    source:
+      path: ../../components/claw_capabilities/cap_im_platform
+      type: local
+    version: '*'
+  cap_llm_config:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_llm_config
+      type: local
+    version: '*'
+  cap_llm_inspect:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_llm_inspect
+      type: local
+    version: '*'
+  cap_lua:
+    dependencies:
+    - name: georgik/lua
+      version: ^5.5.0~7
+    source:
+      path: ../../components/claw_capabilities/cap_lua
+      type: local
+    version: '*'
+  cap_mcp_client:
+    dependencies:
+    - name: mcp_mdns
+      path: ../../common/mcp_mdns
+    - name: espressif/mcp-c-sdk
+      version: ^2.0.0
+    source:
+      path: ../../components/claw_capabilities/cap_mcp_client
+      type: local
+    version: '*'
+  cap_mcp_server:
+    dependencies:
+    - name: mcp_mdns
+      path: ../../common/mcp_mdns
+    - name: espressif/mcp-c-sdk
+      version: ^2.0.0
+    source:
+      path: ../../components/claw_capabilities/cap_mcp_server
+      type: local
+    version: '*'
+  cap_router_mgr:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_router_mgr
+      type: local
+    version: '*'
+  cap_scheduler:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_scheduler
+      type: local
+    version: '*'
+  cap_session_mgr:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_session_mgr
+      type: local
+    version: '*'
+  cap_skill_mgr:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_skill_mgr
+      type: local
+    version: '*'
+  cap_system:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_system
+      type: local
+    version: '*'
+  cap_web_search:
+    dependencies: []
+    source:
+      path: ../../components/claw_capabilities/cap_web_search
+      type: local
+    version: '*'
+  claw_cap:
+    dependencies: []
+    source:
+      path: ../../components/claw_modules/claw_cap
+      type: local
+    version: '*'
+  claw_core:
+    dependencies:
+    - name: claw_utils
+      path: ../claw_utils
+    - name: espressif/cjson
+      public: true
+      version: ^1.7
+    source:
+      path: ../../components/claw_modules/claw_core
+      type: local
+    version: '*'
+  claw_event_router:
+    dependencies: []
+    source:
+      path: ../../components/claw_modules/claw_event_router
+      type: local
+    version: '*'
+  claw_manager:
+    dependencies: []
+    source:
+      path: ../../components/claw_modules/claw_manager
+      type: local
+    version: '*'
+  claw_memory:
+    dependencies: []
+    source:
+      path: ../../components/claw_modules/claw_memory
+      type: local
+    version: '*'
+  claw_skill:
+    dependencies: []
+    source:
+      path: ../../components/claw_modules/claw_skill
+      type: local
+    version: '*'
+  claw_utils:
+    dependencies: []
+    source:
+      path: ../../components/claw_modules/claw_utils
+      type: local
+    version: '*'
+  esp_video:
+    dependencies:
+    - name: tda-2030/claw_video
+      public: true
+      version: ^2.1
+    source:
+      path: ../../components/common/esp_video
+      type: local
+    version: '*'
+  espressif/button:
+    component_hash: a1f34e8ed2e61ffef1a230fd9477005c2db335c7e1f6a239f43e5f119dcbe1b0
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: '*'
+    - name: idf
+      require: private
+      version: '>=4.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 4.2.1
+  espressif/cjson:
+    component_hash: e788323270d90738662d66fffa910bfe1fba019bba087f01557e70c40485b469
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.7.19~2
+  espressif/cmake_utilities:
+    component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.1'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.5.3
+  espressif/esp-dsp:
+    component_hash: ed9ac175b14e0414399a2b33c525579414b5bad19a2a67b12ea212def96f9a98
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.8.2
+  espressif/esp_asrc:
+    component_hash: 83021b6888ba94966bb3a954d435ca031952ddb7f2b873886bd7a0da94bc1108
+    dependencies:
+    - name: espressif/esp_audio_effects
+      registry_url: https://components.espressif.com
+      require: private
+      version: ~1.3
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.1
+  espressif/esp_audio_codec:
+    component_hash: 16e2880dbdd5a72264051f750f33a6e5a38fd25621c83e3a32a85a152d2d2643
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.5.0
+  espressif/esp_audio_effects:
+    component_hash: 6ad72ee106e25b07c9ae5b8ec77b566ef8d697473095f1c982e13247005b9ba6
+    dependencies:
+    - name: espressif/gmf_fft
+      registry_url: https://components.espressif.com
+      require: private
+      version: ~1.0
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.3.0~1
+  espressif/esp_audio_simple_player:
+    component_hash: 84d3f8a4e7a41ad33a2ed33e640cf20313422a25f697f8d4e13c1af9699735a2
+    dependencies:
+    - name: espressif/gmf_audio
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^0.8
+    - name: espressif/gmf_io
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^0.8
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.9.6~1
+  espressif/esp_board_manager:
+    component_hash: 68863a1a161231ad1e02fdd68ef557e95d088abd3a27c24204f8c9c418023534
+    dependencies:
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_BUTTON_SUPPORT} == True
+      name: espressif/button
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^4.1.4
+    - name: espressif/esp_boards
+      registry_url: https://components.espressif.com
+      require: private
+      version: '>=0.5.2,<0.5.4'
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_AUDIO_CODEC_SUPPORT} == True
+      name: espressif/esp_codec_dev
+      registry_url: https://components.espressif.com
+      require: private
+      version: ~1.6
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_GPIO_EXPANDER_SUPPORT} == True
+      name: espressif/esp_io_expander
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.0.1
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_DISPLAY_LCD_SUB_RGB_3WIRE_SPI_SUPPORT} == True
+      name: espressif/esp_lcd_panel_io_additions
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.0.0
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_LCD_TOUCH_SUPPORT} == True
+      name: espressif/esp_lcd_touch
+      registry_url: https://components.espressif.com
+      require: private
+      version: '*'
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_CAMERA_SUPPORT} == True
+      name: espressif/esp_video
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^2.1.0
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_LED_STRIP_SUPPORT} == True
+      name: espressif/led_strip
+      registry_url: https://components.espressif.com
+      require: private
+      version: '*'
+    - matches:
+      - if: $CONFIG{ESP_BOARD_DEV_LITTLEFS_SUPPORT} == True
+      name: joltwallet/littlefs
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.22.1
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.6.2
+  espressif/esp_boards:
+    component_hash: 6d32eb26833922fe6d517165129089d4fe1d973c4fa0e77d5dc06a27257c1e6e
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.5.3~1
+  espressif/esp_cam_sensor:
+    component_hash: 6504a057da210693f737a1440936828be99592969afc2c007d559a9f0b23593b
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    - name: espressif/esp_sccb_intf
+      registry_url: https://components.espressif.com
+      require: private
+      version: '>=0.0.5'
+    - name: idf
+      require: private
+      version: '>=5.3'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    targets:
+    - esp32p4
+    - esp32s3
+    - esp32c3
+    - esp32c5
+    - esp32c6
+    - esp32c61
+    - esp32s31
+    version: 2.4.0
+  espressif/esp_codec_dev:
+    component_hash: 4779f31a3ba3f9b38aee1afe6ccb9ba8f6108dc3a6e77d39d7d714e9a215371b
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.0'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.6.2
+  espressif/esp_h264:
+    component_hash: 0b3524f8517d63f9d4bfc8481dcd325e9cbdb0c8a97e66dbd56df74fed193f8b
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    targets:
+    - esp32s3
+    - esp32s31
+    - esp32p4
+    version: 1.3.8
+  espressif/esp_ipa:
+    component_hash: bf6e4148604eaba7e1b7ae91df03c4caecd1535b605328e60e6f942bc9cb8dbf
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    - name: idf
+      require: private
+      version: '>=5.4'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    targets:
+    - esp32p4
+    version: 2.3.0
+  espressif/esp_new_jpeg:
+    component_hash: e1e7e6991193c41ed6c9fc386702aa7821433319e7aa9c3147cd3236310cd69c
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32
+    - esp32s2
+    - esp32s3
+    - esp32s31
+    - esp32p4
+    - esp32c2
+    - esp32c3
+    - esp32c5
+    - esp32c6
+    - esp32c61
+    - esp32h4
+    version: 1.0.2
+  espressif/esp_sccb_intf:
+    component_hash: eb6a7d5c992f09583c163b2e3f5e95a0fdc87a2d9f8e026f3e59153935553889
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.3'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.0.9
+  espressif/esp_websocket_client:
+    component_hash: dc00233af846f3a744ada283a300e0d586040aadc3ee67361645ecdce4523672
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.8.0
+  espressif/gmf_audio:
+    component_hash: dc88b927adc66bd617aacb39fee28ff61a339f1ab603ff21dc9d0d226eea4947
+    dependencies:
+    - name: espressif/esp_audio_codec
+      registry_url: https://components.espressif.com
+      require: private
+      version: ~2.5
+    - name: espressif/esp_audio_effects
+      registry_url: https://components.espressif.com
+      require: private
+      version: ~1.3
+    - name: espressif/gmf_core
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^0.8
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.8.3
+  espressif/gmf_core:
+    component_hash: 6e11017fc41cdb19a8035e334c9e9caced803d67547fb0e60f69cba5fd735f6a
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.8.4
+  espressif/gmf_fft:
+    component_hash: b59451ef2f96d22b80c27a162515b21f1b85954dda434c0b092172164028779d
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.0.0
+  espressif/gmf_io:
+    component_hash: c6e9b6f560156dc110477214aab279c677e8746ca07a41d08da0452addac7f28
+    dependencies:
+    - name: espressif/esp_codec_dev
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.4
+    - name: espressif/gmf_core
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^0.8
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.8.1
+  espressif/i2c_bus:
+    component_hash: 483112c1619c54c38d0b734fb25f1678733267858a77b7af2f48cc7db6dbbd84
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: '*'
+    - name: idf
+      require: private
+      version: '>=4.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.5.2
+  espressif/led_strip:
+    component_hash: 28621486f77229aaf81c71f5e15d6fbf36c2949cf11094e07090593e659e7639
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 3.0.3
+  espressif/mcp-c-sdk:
+    component_hash: 58252f2ca194794f11aff0ff559b6c16cc57c0838d99558011c2f95eeae87e00
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    - name: espressif/cjson
+      registry_url: https://components.espressif.com
+      require: private
+      version: 1.*
+    - name: idf
+      require: private
+      version: '>=5.4'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.0.1
+  espressif/mdns:
+    component_hash: b679eafd0acae2066e2645bd91d073e33ca5be515e2545cd3c4e55a3e3bce3cb
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.13.1
+  espressif/ramfs:
+    component_hash: 0d78f5f369d900ea3012886898589735861b69b316b8a7ac2c5a0f14da5cde6d
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.1.0
+  espressif/usb:
+    component_hash: 6c2cff118141dbbca181d0d27d71801fdddfc78f7ac03ae43f6e5a8cbd89cb99
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.5.3'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    targets:
+    - esp32s2
+    - esp32s3
+    - esp32s31
+    - esp32p4
+    - esp32h4
+    - linux
+    version: 1.5.0
+  espressif/usb_host_uvc:
+    component_hash: ecb2604b71cb5a65d64e5f441be54793b1838096043ad8cf1fa0d3012de18a9a
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    - name: espressif/usb
+      registry_url: https://components.espressif.com
+      require: public
+      rules:
+      - if: idf_version >=6.0
+      - if: target not in ["linux"]
+      version: ^1.0.0
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    targets:
+    - esp32s2
+    - esp32s3
+    - esp32p4
+    - esp32h4
+    - esp32s31
+    - linux
+    version: 2.5.2
+  georgik/lua:
+    component_hash: 10698fd2d729b63cca8b882e219c3fa3bd8a9adea26f814f2febb624d0385c23
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 5.5.0~7
+  http_reuse:
+    dependencies: []
+    source:
+      path: ../../components/common/http_reuse
+      type: local
+    version: '*'
+  http_server:
+    dependencies:
+    - name: espressif/cjson
+      version: ^1.7.19
+    - name: cap_im_local
+      path: ../../../../components/claw_capabilities/cap_im_local
+    - name: lua_module_http_server
+      path: ../../../../components/lua_modules/lua_module_http_server
+      rules:
+      - if: $CONFIG{APP_CLAW_CAP_LUA} == True
+      - if: $CONFIG{APP_CLAW_LUA_MODULE_HTTP_SERVER} == True
+    source:
+      path: components/http_server
+      type: local
+    version: '*'
+  idf:
+    source:
+      type: idf
+    version: 6.1.0
+  lua_driver_adc:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_driver_adc
+      type: local
+    version: '*'
+  lua_driver_gpio:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_driver_gpio
+      type: local
+    version: '*'
+  lua_driver_i2c:
+    dependencies:
+    - name: espressif/i2c_bus
+      version: ^1.5.1
+    source:
+      path: ../../components/lua_modules/lua_driver_i2c
+      type: local
+    version: '*'
+  lua_driver_mcpwm:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_driver_mcpwm
+      type: local
+    version: '*'
+  lua_driver_pcnt:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_driver_pcnt
+      type: local
+    version: '*'
+  lua_driver_rmt:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_driver_rmt
+      type: local
+    version: '*'
+  lua_driver_touch:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_driver_touch
+      type: local
+    version: '*'
+  lua_driver_uart:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_driver_uart
+      type: local
+    version: '*'
+  lua_module_audio:
+    dependencies:
+    - name: espressif/esp_codec_dev
+      version: '*'
+    - name: espressif/esp-dsp
+      version: '*'
+    - name: espressif/esp_audio_codec
+      version: '*'
+    - name: espressif/esp_audio_simple_player
+      version: ^0.9.6
+    - name: espressif/esp_asrc
+      version: ^1.0.0
+    source:
+      path: ../../components/lua_modules/lua_module_audio
+      type: local
+    version: '*'
+  lua_module_board_manager:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_board_manager
+      type: local
+    version: '*'
+  lua_module_builder:
+    dependencies: []
+    source:
+      path: ../../components/common/lua_module_builder
+      type: local
+    version: '*'
+  lua_module_button:
+    dependencies:
+    - name: espressif/button
+      version: '*'
+    source:
+      path: ../../components/lua_modules/lua_module_button
+      type: local
+    version: '*'
+  lua_module_call_capability:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_call_capability
+      type: local
+    version: '*'
+  lua_module_camera:
+    dependencies:
+    - name: espressif/esp_video
+      version: ^2.0.1
+    - name: lua_module_image
+      path: ../lua_module_image
+    source:
+      path: ../../components/lua_modules/lua_module_camera
+      type: local
+    version: '*'
+  lua_module_delay:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_delay
+      type: local
+    version: '*'
+  lua_module_epaper:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_epaper
+      type: local
+    version: '*'
+  lua_module_event_publisher:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_event_publisher
+      type: local
+    version: '*'
+  lua_module_http_server:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_http_server
+      type: local
+    version: '*'
+  lua_module_image:
+    dependencies:
+    - name: cap_lua
+      path: ../../claw_capabilities/cap_lua
+    - name: espressif/esp_new_jpeg
+      version: ^1.0.0
+    source:
+      path: ../../components/lua_modules/lua_module_image
+      type: local
+    version: '*'
+  lua_module_json:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_json
+      type: local
+    version: '*'
+  lua_module_led_strip:
+    dependencies:
+    - name: espressif/led_strip
+      version: ^3.0.3
+    source:
+      path: ../../components/lua_modules/lua_module_led_strip
+      type: local
+    version: '*'
+  lua_module_ledc:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_ledc
+      type: local
+    version: '*'
+  lua_module_storage:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_storage
+      type: local
+    version: '*'
+  lua_module_system:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_system
+      type: local
+    version: '*'
+  lua_module_thread:
+    dependencies: []
+    source:
+      path: ../../components/lua_modules/lua_module_thread
+      type: local
+    version: '*'
+  lua_module_vision:
+    dependencies:
+    - name: cap_lua
+      path: ../../claw_capabilities/cap_lua
+    - name: lua_module_image
+      path: ../lua_module_image
+    - name: espressif/esp-dl
+      rules:
+      - if: $CONFIG{LUA_MODULE_VISION_ESPDET} == True
+      version: ~3.3.0
+    - name: espressif/color_detect
+      rules:
+      - if: $CONFIG{LUA_MODULE_VISION_COLOR_DETECT} == True
+      version: ^0.1.0
+    source:
+      path: ../../components/lua_modules/lua_module_vision
+      type: local
+    version: '*'
+  mcp_mdns:
+    dependencies:
+    - name: espressif/mdns
+      version: ^1.10.1
+    - name: espressif/cjson
+      public: true
+      version: '*'
+    source:
+      path: ../../components/common/mcp_mdns
+      type: local
+    version: '*'
+  settings:
+    dependencies: []
+    source:
+      path: ../../components/common/settings
+      type: local
+    version: '*'
+  skill_builder:
+    dependencies: []
+    source:
+      path: ../../components/common/skill_builder
+      type: local
+    version: '*'
+  tda-2030/claw_video:
+    component_hash: 8897788393195118b51986e712cdeb0da046934706f8f70168865a33679fb4e8
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    - name: espressif/esp_cam_sensor
+      registry_url: https://components.espressif.com
+      require: private
+      version: 2.4.*
+    - name: espressif/esp_h264
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32p4]
+      version: 1.3.*
+    - name: espressif/esp_ipa
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32p4]
+      version: 2.3.*
+    - name: idf
+      require: private
+      version: '>=5.4'
+    - name: espressif/usb_host_uvc
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32p4, esp32s3, esp32s31]
+      version: 2.5.*
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32p4
+    - esp32s3
+    - esp32c3
+    - esp32c5
+    - esp32c6
+    - esp32c61
+    - esp32s31
+    version: 2.4.1~1
+direct_dependencies:
+- app_claw
+- app_config
+- cap_im_local
+- cap_im_platform
+- claw_utils
+- esp_video
+- espressif/cjson
+- espressif/esp_board_manager
+- espressif/ramfs
+- http_reuse
+- http_server
+- lua_module_http_server
+- settings
+manifest_hash: b4a5ceac936a41f7c149b3c9e5931b61e170934f24f575139eeb79a018f93265
+target: esp32p4
+version: 3.0.0

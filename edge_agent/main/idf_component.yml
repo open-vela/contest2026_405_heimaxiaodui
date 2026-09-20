@@ -1,0 +1,43 @@
+## IDF Component Manager Manifest File
+dependencies:
+  espressif/esp_board_manager:
+    version: "^0.6"
+    public: true
+
+  app_claw:
+    path: ../../../components/common/app_claw
+
+  cap_im_platform:
+    rules:
+      - if: >-
+          $CONFIG{APP_CLAW_CAP_IM_FEISHU} == True || $CONFIG{APP_CLAW_CAP_IM_QQ} == True ||
+          $CONFIG{APP_CLAW_CAP_IM_TG} == True || $CONFIG{APP_CLAW_CAP_IM_WECHAT} == True
+    path: ../../../components/claw_capabilities/cap_im_platform
+
+  app_config:
+    path: ../components/app_config
+
+  espressif/ramfs:
+    version: "^0.1"
+
+  claw_utils:
+    path: ../../../components/claw_modules/claw_utils
+
+  system_ui:
+    rules:
+    - if: $CONFIG{ESP_BOARD_DEV_DISPLAY_LCD_SUPPORT} == True
+    path: ../../../components/common/system_ui
+
+  http_reuse:
+    path: ../../../components/common/http_reuse
+
+  http_server:
+    path: ../components/http_server
+
+  settings:
+    path: ../../../components/common/settings
+
+  esp_video:
+    path: ../../../components/common/esp_video
+    matches:
+    - if: $CONFIG{ESP_BOARD_DEV_CAMERA_SUPPORT} == True

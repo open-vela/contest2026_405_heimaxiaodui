@@ -1,0 +1,5 @@
+WARNING: Python interpreter "E:\Espressif\tools\python\v6.1-beta1\venv\Scripts\python.exe" used to start idf.py is not from installed venv "E:/Espressif/tools/python/v6.1-beta1/venv"
+--- Warning: GDB cannot open serial ports accessed as COMx
+--- Using \\.\COM3 instead...
+--- esp-idf-monitor 1.9.0 on \\.\COM3 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
