@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "team_id": "contest2026_405_heimaxiaodui",
+  "github_login": "BenHe-0905",
+  "generator": "claude-code",
+  "sessions": [
+    {
+      "session_id": "38db7f52-5088-4a4a-896b-5b5509f73a5c",
+      "tool": "claude-code",
+      "started_at": "2026-08-31T03:31:07.117Z",
+      "last_event_at": "2026-08-31T03:56:57.320Z",
+      "event_count": 65,
+      "file_path": "BenHe-0905/2026-08-31/claude-code__38db7f52-5088-4a4a-896b-5b5509f73a5c.jsonl",
+      "collection_mode": "cli",
+      "health": "ok"
+    },
+    {
+      "session_id": "6495e672-1fb3-42f5-b860-fa03f23852c8",
+      "tool": "claude-code",
+      "started_at": "2026-08-31T03:11:49.663Z",
+      "last_event_at": "2026-08-31T03:12:57.092Z",
+      "event_count": 9,
+      "file_path": "BenHe-0905/2026-08-31/claude-code__6495e672-1fb3-42f5-b860-fa03f23852c8.jsonl",
+      "collection_mode": "cli",
+      "health": "ok"
+    },
+    {
+      "session_id": "734b3f01-817f-4ee5-8057-be4e83bb7e2e",
+      "tool": "claude-code",
+      "started_at": "2026-08-26T09:31:50.629Z",
+      "last_event_at": "2026-09-17T14:19:25.777Z",
+      "event_count": 3123,
+      "file_path": "BenHe-0905/2026-08-26/claude-code__734b3f01-817f-4ee5-8057-be4e83bb7e2e.jsonl",
+      "collection_mode": "cli",
+      "health": "ok"
+    },
+    {
+      "session_id": "7f16e0e7-ed71-4381-8fd2-cb3866fbe72d",
+      "tool": "claude-code",
+      "started_at": "2026-09-01T08:58:43.518Z",
+      "last_event_at": "2026-09-01T09:03:51.989Z",
+      "event_count": 6,
+      "file_path": "BenHe-0905/2026-09-01/claude-code__7f16e0e7-ed71-4381-8fd2-cb3866fbe72d.jsonl",
+      "collection_mode": "cli",
+      "health": "ok"
+    },
+    {
+      "session_id": "8507fff2-99f1-4447-8181-078a69edacc7",
+      "tool": "claude-code",
+      "started_at": "2026-09-01T08:59:19.164Z",
+      "last_event_at": "2026-09-11T06:58:01.295Z",
+      "event_count": 7,
+      "file_path": "BenHe-0905/2026-09-01/claude-code__8507fff2-99f1-4447-8181-078a69edacc7.jsonl",
+      "collection_mode": "cli",
+      "health": "ok"
+    },
+    {
+      "session_id": "92c1f0cc-9a81-4f79-9f74-0dee8722a224",
+      "tool": "claude-code",
+      "started_at": "2026-09-01T07:14:36.016Z",
+      "last_event_at": "2026-09-01T07:44:41.034Z",
+      "event_count": 27,
+      "file_path": "BenHe-0905/2026-09-01/claude-code__92c1f0cc-9a81-4f79-9f74-0dee8722a224.jsonl",
+      "collection_mode": "cli",
+      "health": "ok"
+    },
+    {
+      "session_id": "98282b5d-fa0f-4d57-8eba-ffbb4cf0d60c",
+      "tool": "claude-code",
+      "started_at": "2026-08-27T01:58:52.881Z",
+      "last_event_at": "2026-08-27T02:27:00.581Z",
+      "event_count": 17,
+      "file_path": "BenHe-0905/2026-08-27/claude-code__98282b5d-fa0f-4d57-8eba-ffbb4cf0d60c.jsonl",
+      "collection_mode": "cli",
+      "health": "ok"
+    },
+    {
+      "session_id": "d37d16e3-e4f1-4b14-ab4e-1f43b8e96462",
+      "tool": "claude-code",
+      "started_at": "2026-08-31T06:26:16.081Z",
+      "last_event_at": "2026-08-31T07:12:20.421Z",
+      "event_count": 9,
+      "file_path": "BenHe-0905/2026-08-31/claude-code__d37d16e3-e4f1-4b14-ab4e-1f43b8e96462.jsonl",
+      "collection_mode": "cli",
+      "health": "ok"
+    },
+    {
+      "session_id": "e6ea60e0-d4a3-4cc7-b9ec-8da2803db0b2",
+      "tool": "claude-code",
+      "started_at": "2026-08-26T09:27:16.398Z",
+      "last_event_at": "2026-08-27T02:38:21.911Z",
+      "event_count": 62,
+      "file_path": "BenHe-0905/2026-08-26/claude-code__e6ea60e0-d4a3-4cc7-b9ec-8da2803db0b2.jsonl",
+      "collection_mode": "cli",
+      "health": "ok"
+    },
+    {
+      "session_id": "ba707524-91e9-4305-8d3e-454f5253b74c",
+      "tool": "claude-code",
+      "started_at": "2026-09-11T13:31:03.195Z",
+      "last_event_at": "2026-09-17T14:27:51.024Z",
+      "event_count": 415,
+      "file_path": "BenHe-0905/2026-09-11/claude-code__ba707524-91e9-4305-8d3e-454f5253b74c.jsonl",
+      "collection_mode": "cli",
+      "health": "ok"
+    }
+  ],
+  "updated_at": "2026-09-20T00:00:00.000000+00:00"
+}
